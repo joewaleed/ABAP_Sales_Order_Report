@@ -1,0 +1,122 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="OiruEhSNc-cHPhrnFZNB">
+    <mxGraphModel dx="-124" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0oY0yhGFXMviBRu67rsU-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Sales Order Report&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="1215" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-53" edge="1" parent="1" source="0oY0yhGFXMviBRu67rsU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1429.9999999999998" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="135.47" width="330" x="1080" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Order number:" vertex="1">
+          <mxGeometry height="30" width="110" x="1090" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="50" x="1190" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="to:" vertex="1">
+          <mxGeometry height="30" width="30" x="1240" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="50" x="1270" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Order date:" vertex="1">
+          <mxGeometry height="30" width="110" x="1090" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="70" x="1170" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="to:" vertex="1">
+          <mxGeometry height="30" width="30" x="1240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="80" x="1270" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Sales Document Type:" vertex="1">
+          <mxGeometry height="30" width="130" x="1090" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="20" width="50" x="1220" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-15" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Solution Screen&lt;/h1&gt;&lt;p&gt;This section allows users to filter the Sales Order Report output. Users can restrict results by specifying a range of Sales Document numbers (&lt;code data-path-to-node=&quot;0&quot; data-index-in-node=&quot;172&quot;&gt;VBAK-VBELN&lt;/code&gt;), creation/order dates (&lt;code data-path-to-node=&quot;0&quot; data-index-in-node=&quot;207&quot;&gt;VBAK-AUDAT&lt;/code&gt;), or a specific Sales Document Type (&lt;code data-path-to-node=&quot;0&quot; data-index-in-node=&quot;255&quot;&gt;VBAK-AUART&lt;/code&gt;).&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="490" x="890" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-16" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;fillColor=none;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="60" width="500" x="1190" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-17" parent="0oY0yhGFXMviBRu67rsU-16" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontStyle=1" value="" vertex="1">
+          <mxGeometry height="40" width="500" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-18" parent="0oY0yhGFXMviBRu67rsU-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;fontStyle=1" value="ORDER" vertex="1">
+          <mxGeometry height="40" width="90" as="geometry">
+            <mxRectangle height="40" width="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-19" parent="0oY0yhGFXMviBRu67rsU-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;fontStyle=1" value="&lt;span style=&quot;font-size: 12px; text-align: left;&quot;&gt;Sales Document Type:&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="150" x="90" as="geometry">
+            <mxRectangle height="40" width="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-20" parent="0oY0yhGFXMviBRu67rsU-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=4;fontStyle=1" value="Order Date" vertex="1">
+          <mxGeometry height="40" width="100" x="240" as="geometry">
+            <mxRectangle height="40" width="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-43" parent="0oY0yhGFXMviBRu67rsU-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=4;" value="&lt;b&gt;Material&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="340" as="geometry">
+            <mxRectangle height="40" width="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-45" parent="0oY0yhGFXMviBRu67rsU-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=4;" value="&lt;b&gt;Description&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="400" as="geometry">
+            <mxRectangle height="40" width="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-21" parent="0oY0yhGFXMviBRu67rsU-16" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="20" width="500" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-22" parent="0oY0yhGFXMviBRu67rsU-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="20" width="90" as="geometry">
+            <mxRectangle height="20" width="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-23" parent="0oY0yhGFXMviBRu67rsU-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="20" width="150" x="90" as="geometry">
+            <mxRectangle height="20" width="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-24" parent="0oY0yhGFXMviBRu67rsU-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="20" width="100" x="240" as="geometry">
+            <mxRectangle height="20" width="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-44" parent="0oY0yhGFXMviBRu67rsU-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1">
+          <mxGeometry height="20" width="60" x="340" as="geometry">
+            <mxRectangle height="20" width="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-46" parent="0oY0yhGFXMviBRu67rsU-21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1">
+          <mxGeometry height="20" width="100" x="400" as="geometry">
+            <mxRectangle height="20" width="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-49" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ALV&lt;/h1&gt;&lt;p&gt;The ABAP List Viewer (ALV) grid displays the aggregated sales order data based on the selection parameters. It maps order header details (&lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;166&quot;&gt;VBAK&lt;/code&gt;) alongside item-level materials (&lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;204&quot;&gt;VBAP&lt;/code&gt;) and localized material descriptions (&lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;247&quot;&gt;MAKT&lt;/code&gt;) into a clean, interactive tabular report.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="580" x="1120" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-50" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Columns:&lt;/h1&gt;&lt;p&gt;Order number: VBAK-VBELN&lt;/p&gt;&lt;p&gt;Order date: VBAK-AUDAT&lt;/p&gt;&lt;p&gt;Sales Document Type: VBAK-AUART&lt;/p&gt;&lt;p&gt;Material: VBAP-MATNR&lt;/p&gt;&lt;p&gt;Description: MAKT-MAKTX&lt;/p&gt;" vertex="1">
+          <mxGeometry height="190" width="250" x="860" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="0oY0yhGFXMviBRu67rsU-51" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Joins:&lt;/h1&gt;&lt;p&gt;VBAK → VBAP = VBELN&lt;/p&gt;&lt;p&gt;VBAP → MAKT = MATNR&lt;/p&gt;" vertex="1">
+          <mxGeometry height="190" width="250" x="860" y="550" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
