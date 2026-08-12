@@ -6,26 +6,26 @@
 
 REPORT zdbm_orders_reports.
 
-TYPES: BEGIN OF ty_alv,
+TYPES: BEGIN OF ITAB,
          vbeln TYPE vbak-vbeln,
          auart TYPE vbak-auart,
          audat TYPE vbak-audat,
          matnr TYPE vbap-matnr,
          maktx TYPE makt-maktx,
-       END OF ty_alv.
+       END OF ITAB.
 
-DATA: t_alv_data TYPE STANDARD TABLE OF ty_alv,
+DATA: t_alv_data TYPE STANDARD TABLE OF ITAB,
       vbeln      TYPE vbak-vbeln,
       audat      TYPE vbak-audat.
 
 *&---------------------------------------------------------------------*
 *& Selection Screen
 *&---------------------------------------------------------------------*
-SELECTION-SCREEN BEGIN OF BLOCK son WITH FRAME TITLE txt1.
+SELECTION-SCREEN BEGIN OF BLOCK SCR WITH FRAME TITLE txt1.
   SELECT-OPTIONS: on_vbeln FOR vbeln,
                   od_audat FOR audat.
   PARAMETERS:     sd_auart TYPE vbak-auart.
-SELECTION-SCREEN END OF BLOCK son.
+SELECTION-SCREEN END OF BLOCK SCR.
 
 INITIALIZATION.
   txt1 = 'Sales Order Report'.
@@ -33,22 +33,35 @@ INITIALIZATION.
 START-OF-SELECTION.
 
   IF sd_auart IS INITIAL.
-    SELECT a~vbeln, a~auart, a~audat, b~matnr, c~maktx
+    SELECT a~vbeln
+           a~auart
+           a~audat
+           b~matnr
+           c~maktx
       FROM vbak AS a
-      INNER JOIN vbap AS b ON a~vbeln = b~vbeln
-      LEFT JOIN makt AS c ON b~matnr = c~matnr AND c~spras = @sy-langu
-      INTO TABLE @t_alv_data
-      WHERE a~vbeln IN @on_vbeln
-        AND a~audat IN @od_audat.
+      INNER JOIN vbap AS b
+      ON a~vbeln = b~vbeln
+      LEFT JOIN makt AS c
+      ON b~matnr = c~matnr
+      AND c~spras = sy-langu
+      INTO TABLE t_alv_data
+      WHERE a~vbeln IN on_vbeln
+        AND a~audat IN od_audat.
   ELSE.
-    SELECT a~vbeln, a~auart, a~audat, b~matnr, c~maktx
+    SELECT a~vbeln
+           a~auart
+           a~audat
+           b~matnr
+           c~maktx
       FROM vbak AS a
-      INNER JOIN vbap AS b ON a~vbeln = b~vbeln
-      LEFT JOIN makt AS c ON b~matnr = c~matnr AND c~spras = @sy-langu
-      INTO TABLE @t_alv_data
-      WHERE a~vbeln IN @on_vbeln
-        AND a~audat IN @od_audat
-        AND a~auart = @sd_auart.
+      INNER JOIN vbap AS b
+      ON a~vbeln = b~vbeln
+      LEFT JOIN makt AS c
+      ON b~matnr = c~matnr AND c~spras = sy-langu
+      INTO TABLE t_alv_data
+      WHERE a~vbeln IN on_vbeln
+        AND a~audat IN od_audat
+        AND a~auart = sd_auart.
   ENDIF.
 
   IF t_alv_data IS INITIAL.
