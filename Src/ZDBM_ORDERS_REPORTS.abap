@@ -3,8 +3,7 @@
 *&---------------------------------------------------------------------*
 *& Made by: Yousef Waleed
 *&---------------------------------------------------------------------*
-
-REPORT zdbm_orders_reports.
+REPORT zdbm_orders_reports MESSAGE-ID ZSD.
 
 TYPES: BEGIN OF ITAB,
          vbeln TYPE vbak-vbeln,
@@ -15,23 +14,20 @@ TYPES: BEGIN OF ITAB,
        END OF ITAB.
 
 DATA: t_alv_data TYPE STANDARD TABLE OF ITAB,
-      vbeln      TYPE vbak-vbeln,
-      audat      TYPE vbak-audat.
-
+      vbeln TYPE vbak-vbeln,
+      audat TYPE vbak-audat,
+      t_fieldcat TYPE slis_t_fieldcat_alv,
+      w_fieldcat TYPE slis_fieldcat_alv.
 *&---------------------------------------------------------------------*
 *& Selection Screen
 *&---------------------------------------------------------------------*
-SELECTION-SCREEN BEGIN OF BLOCK SCR WITH FRAME TITLE txt1.
+SELECTION-SCREEN BEGIN OF BLOCK SCR WITH FRAME TITLE text-001.
   SELECT-OPTIONS: on_vbeln FOR vbeln,
                   od_audat FOR audat.
   PARAMETERS:     sd_auart TYPE vbak-auart.
 SELECTION-SCREEN END OF BLOCK SCR.
 
-INITIALIZATION.
-  txt1 = 'Sales Order Report'.
-
 START-OF-SELECTION.
-
   IF sd_auart IS INITIAL.
     SELECT a~vbeln
            a~auart
@@ -39,7 +35,7 @@ START-OF-SELECTION.
            b~matnr
            c~maktx
       FROM vbak AS a
-      INNER JOIN vbap AS b
+      JOIN vbap AS b
       ON a~vbeln = b~vbeln
       LEFT JOIN makt AS c
       ON b~matnr = c~matnr
@@ -54,30 +50,27 @@ START-OF-SELECTION.
            b~matnr
            c~maktx
       FROM vbak AS a
-      INNER JOIN vbap AS b
+      JOIN vbap AS b
       ON a~vbeln = b~vbeln
       LEFT JOIN makt AS c
-      ON b~matnr = c~matnr AND c~spras = sy-langu
+      ON b~matnr = c~matnr AND c~spras = 'E'
       INTO TABLE t_alv_data
       WHERE a~vbeln IN on_vbeln
         AND a~audat IN od_audat
         AND a~auart = sd_auart.
   ENDIF.
 
+End-of-SELECTION.
   IF t_alv_data IS INITIAL.
-    MESSAGE 'No records found' TYPE 'I'.
+    MESSAGE e001(zsd).
   ELSE.
     PERFORM display_alv.
   ENDIF.
 
 *&---------------------------------------------------------------------*
-*& Form DISPLAY_ALV
+*& DISPLAY_ALV Subroutine
 *&---------------------------------------------------------------------*
 FORM display_alv.
-
-  DATA: t_fieldcat TYPE slis_t_fieldcat_alv,
-        w_fieldcat TYPE slis_fieldcat_alv.
-
   CLEAR w_fieldcat.
   w_fieldcat-fieldname = 'VBELN'.
   w_fieldcat-seltext_m = 'Order'.
@@ -108,9 +101,5 @@ FORM display_alv.
       i_callback_program = sy-repid
       it_fieldcat        = t_fieldcat
     TABLES
-      t_outtab           = t_alv_data
-    EXCEPTIONS
-      program_error      = 1
-      OTHERS             = 2.
-
+      t_outtab           = t_alv_data.
 ENDFORM.
