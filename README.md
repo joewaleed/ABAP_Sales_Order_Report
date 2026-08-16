@@ -84,7 +84,7 @@ ABAP_Sales_Order_Report/
 4. Go to "Text Element" in the same menu.
 5. Fill in Text Symbols and Selection Texts from [`Src/Text_Element.xlsx`](Src/Text_Element.xlsx).
 6. Activate the text elements separately.
-7. Make sure message class `ZSD` exists (`SE91`) with message `001` maintained, since the report raises it when no records are found.
+7. Make sure message class `ZSD` exists (`SE91`) with message `001` maintained from [`Src/ZSD.xlsx`](Src/ZSD.xlsx), since the report raises it when no records are found.
 8. Activate the report.
 9. Run it (`F8`), enter optional filters on the selection screen, and execute to view the ALV output.
 
