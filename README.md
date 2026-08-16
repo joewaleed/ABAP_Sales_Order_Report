@@ -78,10 +78,13 @@ ABAP_Sales_Order_Report/
 ## How to Use
 
 1. Open your SAP system in Eclipse ADT or the SAP GUI (`SE38`/`SE80`).
-2. Create a new executable report named `ZDBM_ORDERS_REPORTS` (or any Z-name of your choosing).
-3. Copy the code from [`Src/ZDBM_ORDERS_REPORTS.abap`](Src/ZDBM_ORDERS_REPORTS.abap) into the report.
-4. Activate the report.
-5. Run it (`F8`), enter optional filters on the selection screen, and execute to view the ALV output.
+3. Create a new executable report named `ZDBM_ORDERS_REPORTS` (or any Z-name of your choosing).
+4. Copy the code from [`Src/ZDBM_ORDERS_REPORTS.abap`](Src/ZDBM_ORDERS_REPORTS.abap) into the report.
+5. Go to "Text Element" in the same menu
+6. Fill the data in Text Symbols and Selection Texts from [`Src/Text Element.xlsx`](Src/Text Element.xlsx)
+7. Activate the text element separately. 
+8. Activate the report.
+9. Run it (`F8`), enter optional filters on the selection screen, and execute to view the ALV output.
 
 ## Author
 
