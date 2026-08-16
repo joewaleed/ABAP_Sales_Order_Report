@@ -47,7 +47,7 @@ Once executed, the report displays the following columns in an ALV grid:
 | Material                | `VBAP-MATNR` |
 | Description             | `MAKT-MAKTX` |
 
-If no records match the selection criteria, the report displays the message **"No records found"**.
+If no records match the selection criteria, the report raises message `E001` from message class `ZSD` instead of displaying an empty grid.
 
 ![ALV output](<Screenshots/ALV.png>)
 
@@ -64,7 +64,8 @@ The `Diagrams` folder contains the design notes used while building the report, 
 ```
 ABAP_Sales_Order_Report/
 ├── Src/
-│   └── ZDBM_ORDERS_REPORTS.abap   # Report source code
+│   ├── ZDBM_ORDERS_REPORTS.abap   # Report source code
+│   └── Text_Element.xlsx          # Text Symbols & Selection Texts
 ├── Screenshots/
 │   ├── Selection Screen.png       # Selection screen at runtime
 │   └── ALV.png                    # ALV grid output
@@ -78,11 +79,12 @@ ABAP_Sales_Order_Report/
 ## How to Use
 
 1. Open your SAP system in Eclipse ADT or the SAP GUI (`SE38`/`SE80`).
-3. Create a new executable report named `ZDBM_ORDERS_REPORTS` (or any Z-name of your choosing).
-4. Copy the code from [`Src/ZDBM_ORDERS_REPORTS.abap`](Src/ZDBM_ORDERS_REPORTS.abap) into the report.
-5. Go to "Text Element" in the same menu
-6. Fill the data in Text Symbols and Selection Texts from [`Src/Text Element.xlsx`](Src/Text_Element.xlsx)
-7. Activate the text element separately. 
+2. Create a new executable report named `ZDBM_ORDERS_REPORTS` (or any Z-name of your choosing).
+3. Copy the code from [`Src/ZDBM_ORDERS_REPORTS.abap`](Src/ZDBM_ORDERS_REPORTS.abap) into the report.
+4. Go to "Text Element" in the same menu.
+5. Fill in Text Symbols and Selection Texts from [`Src/Text_Element.xlsx`](Src/Text_Element.xlsx).
+6. Activate the text elements separately.
+7. Make sure message class `ZSD` exists (`SE91`) with message `001` maintained, since the report raises it when no records are found.
 8. Activate the report.
 9. Run it (`F8`), enter optional filters on the selection screen, and execute to view the ALV output.
 
